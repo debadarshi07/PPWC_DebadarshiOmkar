@@ -6,4 +6,4 @@ int main() {
     return (0);
 }
 
-// %u is unsigned integer, hence it will return the 32bit 2's complement of -123 in decimal format
+// %u is unsigned integer, hence it will return the 32bit (2's complement of -123) - 123 in decimal format.

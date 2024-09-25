@@ -18,7 +18,7 @@ int main() {
     printf("| Kilometers      |%15.2f |  \n",kms);
     printf("| Centimeters     |%15.2f |  \n",cms);
     printf("| Millimeters     |%15.2f |  \n",mms);
-    printf("| Feet            |%15.2f |  \n",feets);
+    printf("| Feets           |%15.2f |  \n",feets);
     printf("| Inches          |%15.2f |  \n",inches);
     printf("+----------------------------------+\n");
 }

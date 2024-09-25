@@ -8,6 +8,7 @@ int main() {
     printf("Enter in hexadecimal format: ");
     scanf("%d", &c);
     printf("a = %d, b = %d, c = %d\n\n", a, b, c);
+    
     printf("Enter in decimal format:");
     scanf("%i", &b);
     printf("Enter in octal format: ");

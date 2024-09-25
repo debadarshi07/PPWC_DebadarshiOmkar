@@ -8,5 +8,5 @@ int main() {
 }
 
 /*
-    The output wil be 1 and 4. because ch has only one character 'A' and when size of a character literal is counted, it is treated as of int type and size of int in 4.
+    The output will be 1 and 4. because ch has only one character 'A' and when size of a character literal is counted, it is treated as of int type and size of int is 4.
 */
