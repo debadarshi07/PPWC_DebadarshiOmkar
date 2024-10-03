@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    printf("%s\n\n", "One dimensional Array");
     int marks[5];
     marks[0] = 25;
     marks[1] = 21;
@@ -22,6 +23,10 @@ int main() {
     printf("Element at marks + 1 is: %d\n", *(marks + 1));
     printf("Element at marks + 2 is: %d\n\n", *(marks + 2));
 
+    printf("*marks: %d\n", *marks);
+    printf("*marks + 1: %d\n", *marks + 1);
+    printf("*marks + 2: %d\n\n", *marks + 2);
+
     int *add1 = &(marks[0]), *add2 = &(marks[1]), *add3 = &(marks[2]), *add4 = &(marks[3]), *add5 = &(marks[4]);
     printf("Address of the address of marks[0] block is: %u\n", &(add1));
     printf("Address of the address of marks[1] block is: %u\n", &(add2));
@@ -37,9 +42,12 @@ int main() {
     printf("\n\n----------------------------------------------");
     printf("\n\n");
 
+    printf("%s\n\n", "Multidimensional Array");
     // Multidimensional Array
-    int myArr[3][2] = {{1, 2}, {3, 4}, {5, 6}};
+    int myArr[3][2] = {{1, 2}, {8, 4}, {5, 6}};
     printf("The address of myArr is: %u\n", &myArr);
+    printf("*myArr: %u\n", *myArr);
+    printf("**myArr: %d\n", **myArr);
     printf("The address of myArr[0] is; %u\n", &myArr[0]);
     printf("The address of myArr[0][0] is: %u\n", &myArr[0][0]);
     printf("The address of myArr[0][1] is: %u\n", &myArr[0][1]);
@@ -50,12 +58,23 @@ int main() {
     printf("The address of myArr[2][0] is: %u\n", &myArr[2][0]);
     printf("The address of myArr[2][1] is: %u\n\n", &myArr[2][1]);
 
+
     printf("myArr + 1: %u\n", myArr + 1);
     printf("myArr + 2: %u\n\n", myArr + 2);
 
     printf("&myArr + 1: %u\n", &myArr + 1);
+    printf("&myArr + 2: %u\n\n", &myArr + 2);
+
+    printf("*myArr + 1: %u\n", *myArr + 1);
+    printf("*myArr + 2: %u\n\n", *myArr + 2);
+
     printf("&myArr[0] + 1: %u\n", &myArr[0] + 1);
     printf("&myarr[0][0] + 1: %u\n", &myArr[0][0] + 1);
     printf("&myarr[0][1] + 1: %u\n\n", &myArr[0][1] + 1);
     return 0;
 }
+
+// 'arr' refers inner arr first element address
+// '&arr' refers outer arr first element address
+// '*arr' refers inner arr first element address
+// '**arr' refers inner arr first element itself
