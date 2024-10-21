@@ -29,9 +29,9 @@ int main() {
     printf("Enter the string: ");
     fgets(inputString, length + 1, stdin);
     
-    int str_length = strlen(inputString);
-    if (inputString[str_length - 1] == '\n') {
-        inputString[str_length - 1] = '\0';
+    int strLength = strlen(inputString);
+    if (inputString[strLength - 1] == '\n') {
+        inputString[strLength - 1] = '\0';
     }
 
     modifyString(inputString);
