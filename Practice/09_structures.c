@@ -27,9 +27,18 @@ int main() {
     Student s2;
     strcpy(s2.name, "student_2");
     s2.section = 29;
-    s2.rollNo = 1;
+    s2.rollNo = 18;
 
     printf("%s  %d  %d\n", s1.name, s1.section, s1.rollNo);
     printf("%s  %d  %d\n\n", s2.name, s2.section, s2.rollNo);
     
+    // Pointers to structures
+    Student *ptr1 = &s1, *ptr2 = &s2;
+    printf("Printing student details using pointers.\n");
+    printf("%s  %d  %d\n", ptr1->name, (*ptr1).section, (*ptr1).rollNo);
+    printf("%s  %d  %d\n\n", ptr1->name, ptr2->section, ptr2->rollNo);
+    // Can use both . and -> operators to access attributes using pointers from structure elements.
+
+    
+    return 0;
 }
