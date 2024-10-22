@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 struct Student {
     char *name;
@@ -10,6 +9,7 @@ struct Student {
 };
 
 int main () {
+    // Creating elements of Student structures manually
     struct Student s1 = {"student_1", 200, 25};
     struct Student s2 = {"student_2", 500, 28};
 
