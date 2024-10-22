@@ -9,7 +9,7 @@ struct Student {
 };
 
 int main () {
-    // Creating elements of Student structures manually
+    // Creating elements of Student structure manually
     struct Student s1 = {"student_1", 200, 25};
     struct Student s2 = {"student_2", 500, 28};
 
