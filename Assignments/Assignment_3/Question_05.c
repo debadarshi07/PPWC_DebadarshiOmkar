@@ -3,7 +3,7 @@
 
 int binarySearch(int arr[], int size, int target);
 int binarySearch(int arr[], int size, int target) {
-    int bottom = 0, top = size - 1;
+    int bottom = 0, top = size - 1; 
     bool found = false;
     int index = -1;
 

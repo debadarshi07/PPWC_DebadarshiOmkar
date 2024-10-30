@@ -2,7 +2,7 @@
 
 int differenceOfSets(int arr1[], int arr2[], int size1, int size2, int diff[]);
 int differenceOfSets(int arr[], int arr2[], int size1, int size2, int diff[]) {
-    int index = 0;
+    int index = 0; 
     for (int i = 0; i < size1; i++) {
         int found = 0;
         for (int j = 0; j < size2; j++) {

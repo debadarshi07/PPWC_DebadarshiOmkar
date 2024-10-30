@@ -3,7 +3,7 @@
 
 void countEachCharacter(char *str, int size);
 void countEachCharacter(char *str, int size) {
-    int counter[256] = {0};
+    int counter[256] = {0}; 
 
     for (int i = 0; i < size; i++) {
         counter[str[i]]++;

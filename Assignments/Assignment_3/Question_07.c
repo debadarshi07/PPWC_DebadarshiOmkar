@@ -2,7 +2,7 @@
 
 int distinctElements(int arr[], int size, int collect[]);
 int distinctElements(int arr[], int size, int collect[]) {
-    int i, j, index = 0;
+    int i, j, index = 0; 
     for (i = 0; i < size; i++) {
         for (j = 0; j < i; j++) {
             if (arr[i] == arr[j]) {
