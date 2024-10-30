@@ -1,5 +1,5 @@
 <h2>Problem:</h2>
-<p>Define a Student structure with members name, rollno, marks. Make sure the member name should be allocated dynamic memory. Create an instance of Student structure and take user input to show values of all member variables.</p>
+<p>Define a Student structure with member variables name, rollno, and marks. Make sure the member name should be allocated dynamic memory. Create an instance of Student structure and take user input to show values of all member variables.</p>
 
 <h3>Solution Approach:</h3>
 <ul>
