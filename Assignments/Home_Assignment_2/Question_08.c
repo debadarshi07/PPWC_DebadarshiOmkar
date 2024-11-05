@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void f(int *p, int m) {
     m = m + 5;
     *p = *p + m;
@@ -14,5 +15,5 @@ void main() {
 /*
     O/P
     30
-    because pointers follow pass by reference, where as primitive datas follow pass by value.
+    Because pointers follow pass by reference, where as primitive datas follow pass by values.
 */
