@@ -1,80 +1,106 @@
 #include <stdio.h>
 
 int main() {
-    printf("%s\n\n", "One dimensional Array");
+    printf("\nOne dimensional Array\n");
     int marks[5];
-    marks[0] = 25;
+    marks[0] = 20;
     marks[1] = 21;
-    marks[2] = 28;
-    marks[3] = 27;
-    marks[4] = 30;
+    marks[2] = 22;
+    marks[3] = 23;
+    marks[4] = 24;
 
-    printf("\nAddress of marks array is: %u\n", marks);
-    printf("Address of marks array is: %u\n", &(marks));
-    printf("Address of marks[0] is: %u\n", &marks[0]);
-    printf("Address of marks[1] is: %u\n", &marks[1]);
-    printf("Address of marks[2] is: %u\n", &marks[2]);
-    printf("Address of marks[3] is: %u\n", &marks[3]);
-    printf("Address of marks[4] is: %u\n\n", &marks[4]);
-    printf("4th element of marks array is: %d\n\n", *(&marks[3]));
-    printf("marks + 1: %u\n" ,marks + 1);
-    printf("marks + 2: %u\n\n" ,marks + 2);
+    printf("\nmarks: %u\n", marks);
+    printf("&marks: %u\n\n", &marks);
 
-    printf("Element at marks + 1 is: %d\n", *(marks + 1));
-    printf("Element at marks + 2 is: %d\n\n", *(marks + 2));
+    printf("&marks[0]: %u\n", &marks[0]);
+    printf("&marks[1]: %u\n", &marks[1]);
+    printf("&marks[2]: %u\n", &marks[2]);
+    printf("&marks[3]: %u\n", &marks[3]);
+    printf("&marks[4]: %u\n\n", &marks[4]);
+
+    printf("*(&marks[3]): %d\n\n", *(&marks[3]));
+
+    printf("marks + 1: %u\n", marks + 1);
+    printf("marks + 2: %u\n\n", marks + 2);
+
+    printf("&marks + 1: %u\n", &marks + 1);
+    printf("&marks + 2: %u\n\n", &marks + 2);
+
+    printf("*(marks + 1) is: %d\n", *(marks + 1));
+    printf("*(marks + 2): %d\n\n", *(marks + 2));
 
     printf("*marks: %d\n", *marks);
     printf("*marks + 1: %d\n", *marks + 1);
     printf("*marks + 2: %d\n\n", *marks + 2);
 
     int *add1 = &(marks[0]), *add2 = &(marks[1]), *add3 = &(marks[2]), *add4 = &(marks[3]), *add5 = &(marks[4]);
-    printf("Address of the address of marks[0] block is: %u\n", &(add1));
-    printf("Address of the address of marks[1] block is: %u\n", &(add2));
-    printf("Address of the address of marks[2] block is: %u\n", &(add3));
-    printf("Address of the address of marks[3] block is: %u\n", &(add4));
-    printf("Address of the address of marks[4] block is: %u\n\n", &(add5));
+    printf("&(add1): %u\n", &(add1));
+    printf("&(add2): %u\n", &(add2));
+    printf("&(add3): %u\n", &(add3));
+    printf("&(add4): %u\n", &(add4));
+    printf("&(add5): %u\n\n", &(add5));
 
-    int arr[] = {1, 2, 3};
-    printf("Elements of arr is: ");
-    for (int i = 0; i < 3; i++) {
-        printf("%d ", arr[i]);
+    printf("Elements of marks are: ");
+    for (int i = 0; i < sizeof(marks) / sizeof(marks[0]); i++) {
+        printf("%d ", marks[i]);
     }
-    printf("\n\n----------------------------------------------");
+    printf("\n\n---------------------------------");
     printf("\n\n");
 
-    printf("%s\n\n", "Multidimensional Array");
+    printf("\nMultidimensional Array\n");
     // Multidimensional Array
-    int myArr[3][2] = {{1, 2}, {8, 4}, {5, 6}};
-    printf("The address of myArr is: %u\n", &myArr);
+    int myArr[3][2] = {{10, 20}, {30, 40}, {50, 60}};
+
+    printf("\nmyArr: %u\n", myArr);
+    printf("&myArr: %u\n", &myArr);
+    printf("*(&myArr): %u\n", *(&myArr));
     printf("*myArr: %u\n", *myArr);
-    printf("**myArr: %d\n", **myArr);
-    printf("The address of myArr[0] is; %u\n", &myArr[0]);
-    printf("The address of myArr[0][0] is: %u\n", &myArr[0][0]);
-    printf("The address of myArr[0][1] is: %u\n", &myArr[0][1]);
-    printf("The address of myArr[1] is: %u\n", &myArr[1]);
-    printf("The address of myArr[1][0] is: %u\n", &myArr[1][0]);
-    printf("The address of myArr[1][1] is: %u\n", &myArr[1][1]);
-    printf("The address of myArr[2] is: %u\n", &myArr[2]);
-    printf("The address of myArr[2][0] is: %u\n", &myArr[2][0]);
-    printf("The address of myArr[2][1] is: %u\n\n", &myArr[2][1]);
+    printf("**myArr: %d\n\n", **myArr);
 
+    printf("myArr[0]: %u\n", myArr[0]);
+    printf("&myArr[0]: %u\n", &myArr[0]);
+    printf("&myArr[0][0]: %u\n", &myArr[0][0]);
+    printf("&myArr[0][1]: %u\n\n", &myArr[0][1]);
 
+    printf("myArr[1]: %u\n", myArr[1]);
+    printf("&myArr[1]: %u\n", &myArr[1]);
+    printf("&myArr[1][0]: %u\n", &myArr[1][0]);
+    printf("&myArr[1][1]: %u\n\n", &myArr[1][1]);
+
+    printf("myArr[2]: %u\n", myArr[2]);
+    printf("&myArr[2]: %u\n", &myArr[2]);
+    printf("&myArr[2][0]: %u\n", &myArr[2][0]);
+    printf("&myArr[2][1]: %u\n\n", &myArr[2][1]);
+
+    printf("myArr: %u\n", myArr);
     printf("myArr + 1: %u\n", myArr + 1);
     printf("myArr + 2: %u\n\n", myArr + 2);
 
+    printf("&myArr: %u\n", &myArr);
     printf("&myArr + 1: %u\n", &myArr + 1);
     printf("&myArr + 2: %u\n\n", &myArr + 2);
 
+    printf("*myArr: %u\n", *myArr);
     printf("*myArr + 1: %u\n", *myArr + 1);
     printf("*myArr + 2: %u\n\n", *myArr + 2);
 
+    printf("*(&myArr): %u\n", *(&myArr));
+    printf("*(&myArr) + 1: %u\n", *(&myArr) + 1);
+    printf("*(&myArr) + 2: %u\n\n", *(&myArr) + 2);
+
+    printf("myArr[0]: %u\n", myArr[0]);
+    printf("myArr[0] + 1: %u\n", myArr[0] + 1);
+    printf("myArr[0] + 2: %u\n\n", myArr[0] + 2);
+
     printf("&myArr[0] + 1: %u\n", &myArr[0] + 1);
-    printf("&myarr[0][0] + 1: %u\n", &myArr[0][0] + 1);
-    printf("&myarr[0][1] + 1: %u\n\n", &myArr[0][1] + 1);
+    printf("&myArr[0][0] + 1: %u\n", &myArr[0][0] + 1);
+    printf("&myArr[0][1] + 1: %u\n\n", &myArr[0][1] + 1);
+
     return 0;
 }
 
-// 'arr' refers inner arr first element address
-// '&arr' refers outer arr first element address
-// '*arr' refers inner arr first element address
-// '**arr' refers inner arr first element itself
+// Conclusions:
+// 'marks' refers address of the first element individually.
+// Hence 'marks + 1' is the address of the second element.
+// '&marks' refers address of the first element but from array's pov.
+// Hence '&marks + 1' is the address appears after the entire array.
