@@ -4,10 +4,10 @@ int main() {
     printf("\nOne dimensional Array\n");
     int marks[5];
     marks[0] = 20;
-    marks[1] = 21;
-    marks[2] = 22;
-    marks[3] = 23;
-    marks[4] = 24;
+    marks[1] = 31;
+    marks[2] = 42;
+    marks[3] = 53;
+    marks[4] = 64;
 
     printf("\nmarks: %u\n", marks);
     printf("&marks: %u\n\n", &marks);

@@ -8,7 +8,7 @@ int main() {
     }
 
     printf("\n");
-    
+
     char name2[] = "Debadarshi Omkar";
     printf("I am %s.\n", name2);
 
@@ -20,7 +20,7 @@ int main() {
     // 'gets' function
     char village[30];
     printf("Enter your village name: ");
-    // gets(village);
+    gets(village);
     printf("You are from %s.\n", village);
 
     // 'puts' function
@@ -44,7 +44,7 @@ int main() {
     puts(c);
 
     // 'strcmp' function
-    char e[] = "stringE", f[] = "stringF";
+    char e[] = "stringE", f[] = "stringH";
     int result = strcmp(e, f);
     printf("Comparision result: %d\n", result);
     return 0;
