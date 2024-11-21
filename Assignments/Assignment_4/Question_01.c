@@ -11,7 +11,7 @@ int main() {
 
     printf("Value\t\tAddress\n------------------------\n");
     printf("%d\t\t%p\n%d\t\t%p\n%d\t\t%p\n", Ia, (void*)IaAdd, Fb, (void*)FbAdd, Chvar, (void*)ChvarAdd);
-    // (void*) before every pointer is optional. This is only used to make the code more portable for all the browsers to avoid warnings while using pointers with %p.
-    
+    // (void*) before every pointer is optional. This is only used to make the code more portable for all the browsers to avoid warnings while printing pointers with %p.
+
     return 0;
 }
