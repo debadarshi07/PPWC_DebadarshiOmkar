@@ -1,13 +1,11 @@
 // break statement within a switch case is used to terminate the switch case statement once any of the cases got matched. But, yes a switch case can work without a break statement.
 
 #include <stdio.h>
-int main()
-{
+int main() {
     // example with break
     printf("For switch case with break: \n");
     int a = 1;
-    switch (a)
-    {
+    switch (a) {
     case 0:
         printf("a is 0.\n");
         break;
@@ -21,8 +19,7 @@ int main()
 
     // example without break
     printf("For switch case without break: \n");
-    switch (a)
-    {
+    switch (a) {
     case 0:
         printf("a is 0.\n");
     case 1:

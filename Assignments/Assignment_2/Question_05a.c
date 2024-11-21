@@ -1,6 +1,5 @@
 #include <stdio.h>
-int main()
-{
+int main() {
     float x = 25.0, y = 10.0;
     if (y != (x - 10.0))
         x = x - 10.0;

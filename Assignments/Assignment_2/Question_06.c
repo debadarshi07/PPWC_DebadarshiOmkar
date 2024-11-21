@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-int leap(int year);
-int leap(int year) {
-    if (year % 4 == 0 || year % 100 == 0 && year % 400 == 0) 
-        return 1;
-    return 0;
+int is_leap(int year);
+int is_leap(int year) {
+    return (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
 }
 
 int main() {
@@ -25,8 +23,9 @@ int main() {
         return 0;
     }
 
-    if (leap(year))
+    if (is_leap(year)) {
         daysInMonths[2] = 29;
+    }
 
     int dayNumber = 0;
     for (int i = 1; i < month; i++) {

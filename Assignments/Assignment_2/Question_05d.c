@@ -1,9 +1,7 @@
 #include <stdio.h>
-int main()
-{
+int main() {
     int i = 1;
-    // while ()
-    // {
+    // while () {
     //     printf("%d ", i++);
     //     if (i > 10)
     //         break;

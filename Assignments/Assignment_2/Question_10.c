@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+void generateTable(int number);
 void generateTable(int number) {
     printf("+-------------------------------------------+\n|");
     for (int i = 1; i <= 10; i++) {

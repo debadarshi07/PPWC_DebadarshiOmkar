@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int marks;
     char grade;
     printf("Enter marks: ");
@@ -12,8 +11,7 @@ int main()
         return 0;
     }
 
-    switch (marks)
-    {
+    switch (marks) {
     case 95 ... 100:
         grade = 'O';
         break;
