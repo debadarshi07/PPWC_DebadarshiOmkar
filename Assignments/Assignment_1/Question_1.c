@@ -1,6 +1,6 @@
 /*
-    Code : Blocks of instructions written by a programmer in any high level human readable language.
-    Executable file : This is a file that contains the compiled version of code that can be executed by machine.
+    Code : Blocks of instructions written by a programmer using any programming language.
+    Executable file : This is a file that contains the compiled version of code that can be executed by the machine.
 
     ways to convert a C code into executable file
         (i) gcc -E source.c -o source.i
