@@ -3,11 +3,11 @@
 #include <math.h>
 
 void binaryToHex(char *binary) {
-    int len = strlen(binary);
+    int length = strlen(binary);
     int decimalValue = 0;
 
-    for (int i = 0; i < len; i++) {
-        if (binary[len - 1 - i] == '1') {
+    for (int i = length; i >= 0; i--) {
+        if (binary[i] == '1') {
             decimalValue += pow(2, i);
         }
     }

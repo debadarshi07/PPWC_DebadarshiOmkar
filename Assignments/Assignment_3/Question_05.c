@@ -22,6 +22,22 @@ int binarySearch(int arr[], int size, int target) {
     return index;
 }
 
+int binarySearchRecursive(int arr[], int size, int bottom, int top, int target);
+int binarySearchRecursive(int arr[], int size, int bottom, int top, int target) {
+    if (bottom <= top) {
+        int mid = bottom + (top - bottom) / 2;
+
+        if(arr[mid] == target) {
+            return mid;
+        } else if(arr[mid] < target) {
+            binarySearchRecursive(arr, size, mid + 1, top, target);
+        } else if(arr[mid] > target) {
+            binarySearchRecursive(arr, size, bottom, mid - 1, target);
+        }
+    }
+    return -1;
+}
+
 int main() {
     int arr[] = {1,3,5,7,9,11,13};
     float target = 5;
@@ -33,6 +49,6 @@ int main() {
     } else {
         printf("Target element not found in the array.");
     }
-    
+
     return 0;
 }
