@@ -2,8 +2,8 @@
 
 void convert_to_uppercase(char *string, int size) {
     for (int i = 0; i < size; i++) {
-        if (string[i] >= 'a' && string[i] <= 'z') {
-            string[i] = string[i] - 32;
+        if (*(string + i) >= 'a' && *(string + i) <= 'z') {
+            *(string + i) = *(string + i) - 32;
         }
     }
 }
