@@ -4,14 +4,14 @@ int main() {
     int num1 = 5, num2 = 7, *num1Add = &num1, *num2Add = &num2;
 
     printf("Before Swapping.\n");
-    printf("%d --> %d\n%d --> %d\n", num1, num1Add, num2, num2Add);
+    printf("%d --> %p\n%d --> %p\n", num1, num1Add, num2, num2Add);
 
     int temp = num1;
     num1 = num2;
     num2 = temp;
 
     printf("\nAfter Swapping.\n");
-    printf("%d --> %d\n%d --> %d\n", num1, num1Add, num2, num2Add);
+    printf("%d --> %p\n%d --> %p\n", num1, num1Add, num2, num2Add);
 
     return 0;
 }
