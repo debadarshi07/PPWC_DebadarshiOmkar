@@ -9,3 +9,9 @@ int main() {
     fun(a);
     return (0);
 }
+
+/*
+    O/P
+    5
+    2
+*/

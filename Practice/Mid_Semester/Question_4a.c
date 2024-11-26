@@ -7,3 +7,8 @@ int main() {
     }
     return 0;
 }
+
+/*
+    O/P
+    25
+*/

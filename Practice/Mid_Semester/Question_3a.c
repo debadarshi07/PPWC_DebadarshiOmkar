@@ -5,3 +5,8 @@ int main() {
     printf("%d\n", ip[1]);
     return (0);
 }
+
+/*
+    O/P
+    6
+*/
