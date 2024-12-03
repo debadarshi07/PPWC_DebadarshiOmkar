@@ -52,7 +52,12 @@ int main () {
     }
     printf("\n\nptr: %d\n", ptr);
     printf("*ptr: %d\n", *ptr);
-    printf("&ptr: %d\n\n", &ptr);
+    printf("ptr + 1: %d\n\n", ptr + 1);
+    
+    printf("&ptr: %d\n", &ptr);
+    printf("**(&ptr): %d\n",**(&ptr));
+    printf("sizeof(&ptr): %d\n", sizeof(&ptr));
+    printf("&ptr + 1: %d\n\n", &ptr + 1);
 
     // realloc()
     // printf("Enter the new size: ");
