@@ -11,5 +11,5 @@ int j = 10;
 
 /*
     O/P
-    Linkage error as there are multiple variables with name j
+    Linkage error as there are multiple variables with name j.
 */
