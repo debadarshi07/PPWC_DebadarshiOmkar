@@ -9,6 +9,8 @@ int main() {
 
 /*
     Considering the base address of the given array as 1000,
+
+    O/P
     1020 1020 1020
     9 9 9
 */

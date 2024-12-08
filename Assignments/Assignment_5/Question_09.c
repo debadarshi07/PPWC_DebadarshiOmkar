@@ -12,5 +12,7 @@ int main(void) {
 
 /*
     O/P
-    10 10 14
+    (D) 10, 10, 14
+
+    Updation in x and z[1] using pointer p and direct dereferencing respectively.
 */

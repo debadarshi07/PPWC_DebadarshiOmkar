@@ -21,3 +21,8 @@ int fun1(int x, int y) {
 int fun2(int x, int y) {
     return x * y;
 }
+
+/*
+    O/P
+    9...20
+*/

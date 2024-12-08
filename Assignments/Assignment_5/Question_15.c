@@ -14,6 +14,7 @@ int main() {
 }
 
 /*
+    O/P
     100
     00000000
     Yes, line number 9 can be treated as like free() to deallocate memory.

@@ -14,6 +14,7 @@ int main() {
 }
 
 /*
+    O/P
     2 (arr[2][1])
     108 (address of arr[0][2])
     108 (address of arr[0][2])

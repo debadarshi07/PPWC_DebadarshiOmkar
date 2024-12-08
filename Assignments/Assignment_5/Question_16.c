@@ -9,5 +9,5 @@ int main() {
 
 /*
     O/P
-    Error because p is a void type variable and getting assigned with an integer.
+    Error because p is a void type variable and getting assigned with an integer variable.
 */
