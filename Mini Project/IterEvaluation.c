@@ -90,6 +90,6 @@ int main () {
         printf("\n\nYou are passed in the subject.");
         printf("\nGrade: %c\n\n", grade);
     }
-    
+
     return 0;
 }
