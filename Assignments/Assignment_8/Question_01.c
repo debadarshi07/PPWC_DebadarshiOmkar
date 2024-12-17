@@ -29,6 +29,6 @@ int main(void) {
     ITER
     ITER
 
-    Total 8 processes will be created.
+    Total number of processes: 8
     The formula that can be devised for number of processes created is: 2^n, where n is no. of fork() in program.
 */
