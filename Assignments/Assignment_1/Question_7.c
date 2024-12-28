@@ -17,7 +17,6 @@ int main() {
     scanf("%lf", &finalPercentage);
 
     finalWeight = finalPercentage / 100.0;
-
     scoreNeeded = (minAverageRequired - (currentAverage * (1 - finalWeight))) / finalWeight;
 
     printf("You need a score of %.2f on the final to get a %c.\n", scoreNeeded, desiredGrade);

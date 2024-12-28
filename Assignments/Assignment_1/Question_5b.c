@@ -5,4 +5,4 @@ int main() {
     return (0);
 }
 
-// %X is unsigned integer in hexadecimal format specifier, hence it will return the 32bit 2's complement of -123 in hexadecimal format.
+// %X is unsigned integer in hexadecimal format specifier with all the uppercase characters, hence it will return the 32bit 2's complement of -123 in hexadecimal format.

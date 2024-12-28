@@ -21,5 +21,5 @@
        (iv) gcc source.o -o executable_file
             source.o: The object file to link.
             -o executable: Specifies the name of the final executable file.
-            
+
 */
