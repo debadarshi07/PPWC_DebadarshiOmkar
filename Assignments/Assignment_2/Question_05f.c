@@ -6,4 +6,9 @@ int main() {
     return 0;
 }
 
-// The output will be 'count down in -1', as count is initialized as 11 and then the while loop continues to run until the condition fails. The condition will only fail when the given condition express becomes zero. Hence after 12th iteration the expression will be zero and count variable by that time will be -1.
+/*
+    O/P
+    count down is -1
+
+    As count is initialized as 11 and then the while loop continues to run until the condition fails. The condition will only fail when the given condition express becomes zero. Hence after 12th iteration the expression will be zero and count variable by that time will be -1.
+*/

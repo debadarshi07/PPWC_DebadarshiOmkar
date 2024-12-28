@@ -13,4 +13,9 @@ int main() {
     return (0);
 }
 
-// The output will be Hello. The Hello is printed because of case 3. It's because i is 2, so case: 2 will satisfy then there is no break statement. Hence it will run for case: 3 as well.
+/*
+    O/P
+    Hello
+
+    The Hello is printed because of case 3. It's because i is 2, so case: 2 will satisfy then there is no break statement. Hence it will run for case: 3 as well.
+*/

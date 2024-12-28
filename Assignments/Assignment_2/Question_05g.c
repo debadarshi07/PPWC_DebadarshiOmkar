@@ -7,4 +7,9 @@ int main() {
     return 0;
 }
 
-// The output will be 45 lines of #########. Because the outer loop will iterate for 9 times(9 to 1) and for a single iteration of outer loop the inner loop will iterate for 5 times(6 to 2). Hence total number of printing will be 9 * 5 = 45.
+/*
+    O/P
+    45 new lines of #########
+
+    Because the outer loop will iterate for 9 times(9 to 1) and for a single iteration of outer loop the inner loop will iterate for 5 times(6 to 2). Hence total number of printing will be 9 * 5 = 45.
+*/
