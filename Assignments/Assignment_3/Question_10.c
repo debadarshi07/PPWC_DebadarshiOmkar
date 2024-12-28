@@ -11,7 +11,6 @@ void binaryToHex(char *binary) {
             decimalValue += pow(2, i);
         }
     }
-
     printf("Hexadecimal: %X\n", decimalValue);
 }
 
