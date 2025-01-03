@@ -27,7 +27,7 @@ int main() {
 	getchar();
 
 	printf("Enter name of student 6: ");
-//	scanf("%[^\n]s", s6);
+//	scanf("%[^\n]", s6);
 //	gets(s6);
 	fgets(s6, 20, stdin);
 	printf("%s\n", s6);
