@@ -12,7 +12,7 @@ int main () {
     // do while loop
     do {
         printf("%d ", a);
-    }  while (a++ < 10);
+    } while (a++ < 10);
 
     printf("\n\n");
 
@@ -29,5 +29,5 @@ int main () {
     for(int i = 0; i < 11; i++) {
         printf("%d * %d = %d\n", num , i , (num*i));
     }
-
+    return 0;
 }
