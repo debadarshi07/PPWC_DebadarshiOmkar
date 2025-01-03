@@ -18,5 +18,6 @@ int main () {
     printf("User given interger input is: %d\n", a);
     printf("User given float input is: %f\n", b);
     printf("User given character input is: %c\n", c);
+
     return 0;
 }

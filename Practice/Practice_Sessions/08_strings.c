@@ -23,6 +23,12 @@ int main() {
     gets(village);
     printf("You are from %s.\n", village);
 
+    // 'fgets' function
+    char school[30];
+    printf("Enter your school name: ");
+    fgets(school, 30, stdin);
+    printf("Okay, then you are a student of %s\n", school);
+
     // 'puts' function
     printf("I'm also from ");
     puts(village); // It prints the string and takes the cursor to next line.
