@@ -17,4 +17,6 @@ int main () {
     }
 
     printf("\n%d", 'A');
+
+    return 0;
 }
