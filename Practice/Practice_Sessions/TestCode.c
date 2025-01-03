@@ -64,5 +64,16 @@ int main () {
 	
 	printf("*ptr3: %d\n", *ptr3);
 	printf("*ptr4: %d\n", *ptr4);
-    return 0;
+
+	// Testing comparision operators
+	float a = (int)5.5;
+	printf("\n%f\n", a);
+	int b = 8;
+	if (a == 5.5) {
+		printf("\nTrue: %f\n", a);
+	} else {
+		printf("\nFalse: %f\n", a);
+	}
+
+	return 0;
 }
