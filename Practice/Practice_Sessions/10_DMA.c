@@ -10,6 +10,10 @@ int main () {
     // scanf("%d", &n);
 
     // ptr = (int*) malloc(n * sizeof(int));
+    // if (ptr == NULL) {
+    //     printf("Memory allocation failed.\n");
+    //     exit(0);
+    // }
 
     // for (int i = 0; i < n; i++) {
     //     printf("Enter element %d: ", i+1);
@@ -35,6 +39,10 @@ int main () {
     scanf("%d", &n);
 
     ptr = (int*) calloc(n , sizeof(int));
+    if (ptr == NULL) {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
 
     for (int i = 0; i < n; i++) {
         printf("Enter element %d: ", i+1);
@@ -73,20 +81,20 @@ int main () {
     // printf("ptr2: %d\n\n", ptr2);
 
     // printf("*ptr1: %x\n", *ptr1); // Garbage value
-    // printf("*ptr2: %x\n\n", *ptr2); // Always intializes with 0
+    // printf("*ptr2: %x\n\n", *ptr2); // Intialized as 0
 
     free(ptr);
-   // ptr = NULL; // To make sure ptr can never be accessed again until it's reallocated
+    // ptr = NULL; // To make sure ptr can never be accessed again until it's reallocated
     // free(ptr1);
     // free(ptr2);
 
     // Checking what happens on freeing the dynamically allocated memory.
-    // printf("ptr after free: %d\n", ptr);
-    // printf("ptr[0]: %d\n", ptr[0]);
-    // printf("ptr[1]: %d\n", ptr[1]);
-    // printf("ptr[2]: %d\n", ptr[2]);
-    // printf("ptr[3]: %d\n", ptr[3]);
-    // printf("ptr[4]: %d\n\n", ptr[4]);
+    printf("ptr after free: %d\n", ptr);
+    printf("ptr[0]: %d\n", ptr[0]);
+    printf("ptr[1]: %d\n", ptr[1]);
+    printf("ptr[2]: %d\n", ptr[2]);
+    printf("ptr[3]: %d\n", ptr[3]);
+    printf("ptr[4]: %d\n\n", ptr[4]);
 
     // printf("ptr1 after free: %d\n", ptr1);
     // printf("ptr2 after free: %d\n", ptr2);

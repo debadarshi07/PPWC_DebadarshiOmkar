@@ -6,4 +6,6 @@ int sum (int a , int b) {
 
 int main () {
     printf("%d", sum(5, 8));
+
+    return 0;
 }
