@@ -9,6 +9,7 @@ Here, use the fork() system call to create a child process. The child process wi
 
 int main() {
     int fd[2];
+    pipe(fd);
     pid_t pid;
     char *sent = "Jai Hind from Debadarshi Omkar";
     char received[strlen(sent) + 1];

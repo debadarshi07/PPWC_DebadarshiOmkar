@@ -8,6 +8,7 @@
 
 int main() {
     int fd[2];
+    pipe(fd);
     char *sent = "Jai Hind from Debadarshi Omkar";
     char received[strlen(sent) + 1];
 

@@ -8,6 +8,7 @@
 
 int main() {
     int fd[2];
+    pipe(fd);
     pid_t cid;
     char write_msg[] = "A message from parent.";
     char read_msg[strlen(write_msg) + 1];
