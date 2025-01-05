@@ -28,7 +28,6 @@ int main () {
 
         default: printf("Enter valid input.");
     }
-
     printf("\nSalary is : Rs.%.2f\n\n\n", salary);
 
     return 0;

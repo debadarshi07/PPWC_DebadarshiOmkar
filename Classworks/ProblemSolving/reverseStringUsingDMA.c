@@ -28,7 +28,6 @@ int main () {
     gets(string);
 
     char* reversed = reverseString(string);
-
     printf("Reversed string: %s\n", reversed);
 
     free(reversed);
