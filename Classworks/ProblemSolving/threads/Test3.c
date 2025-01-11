@@ -9,6 +9,7 @@ int main() {
     pthread_join(t, NULL);
     return 0;
 }
+
 void *stringpass(void *arg) {
     char *str;
     str = (char *)(arg);

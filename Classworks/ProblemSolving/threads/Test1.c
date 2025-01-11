@@ -7,6 +7,7 @@ void *print_message(void *arg) {
     printf("%s\n", message);
     pthread_exit(NULL);
 }
+
 int main() {
     pthread_t thread1, thread2;
     pthread_create(&thread1, NULL, print_message, "Hello from Thread 1");

@@ -11,12 +11,12 @@ int main() {
     printf("Bye....main thread\n");
     return 0;
 }
+
 void *arraypass(void *arg) {
     int *ar, i;
     ar = (int *)arg;
     for (i = 0; i < 4; i++) {
         printf("Received:arr[%d]=%d\n", i, *(ar + i));
-        /*or printf("Received:arr[%d]=%d\n",i,ar[i]); */
     }
     pthread_exit(NULL);
 }

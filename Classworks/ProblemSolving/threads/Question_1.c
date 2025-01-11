@@ -3,11 +3,12 @@
 #include <pthread.h>
 
 void *thread_function(void *arg) {
-    int thread_num = *((int *)arg); // Retrieve the thread number from the argument
+    int thread_num = *((int *)arg);
     printf("Hello from thread %d!\n", thread_num);
     int result = thread_num * 2;
     pthread_exit((void *)result);
 }
+
 int main() {
     pthread_t threads[3];
     int thread_args[3];
