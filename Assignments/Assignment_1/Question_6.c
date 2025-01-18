@@ -12,7 +12,7 @@ int main() {
     float inches = meters * 39.3701;
 
     printf("+----------------------------------+\n");
-    printf("| Unit            | Value          |\n");
+    printf("| Unit\t\t  | Value\t   |\n");
     printf("+----------------------------------+\n");
     printf("| Meters          |%15.2f |  \n",meters);
     printf("| Kilometers      |%15.2f |  \n",kms);

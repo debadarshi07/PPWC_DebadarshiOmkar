@@ -6,4 +6,4 @@ int main() {
     return 0;
 }
 
-// Output will be 16. Because / and * has higher presidence than +, so these will be calculated first with left to right associativity.
+// Output will be 16. Because / and * has higher presidence than +, so these will be calculated first with left to right associativity and then the remaining operators will be calculated.
