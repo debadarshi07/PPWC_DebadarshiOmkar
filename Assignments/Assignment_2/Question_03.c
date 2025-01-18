@@ -1,4 +1,4 @@
-// Functions of break and continue statements within a loops are to terminate loop completely and to skip the current iteration to next iteration respectively.
+// Function of break statement within a loop is to terminate loop completely and the function of continue statement is to skip the current iteration to next iteration immediately.
 
 // Applications
 // i. break -> In a linear search, whenever we find the target element, we use break to avoid unnecessary searches to enhance time complexity.
