@@ -6,11 +6,10 @@ void binaryToHex(char *binary) {
     int length = strlen(binary);
     int decimalValue = 0, power = 0;
 
-    for (int i = length - 1; i >= 0; i--) {
-        if (binary[i] == '1') {
-            decimalValue += pow(2, power);
+    for (int i = 0; i < length; i++) {
+        if (binary[length - 1 - i] == '1') {
+            decimalValue += pow(2, i);
         }
-        power++;
     }
     printf("Hexadecimal: %X\n", decimalValue);
 }
