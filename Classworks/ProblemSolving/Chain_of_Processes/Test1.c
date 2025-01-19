@@ -8,7 +8,7 @@ int main() {
     int pid;
     int n = 4;
     for (int i = 1; i < n; i++) {
-        if (if pid = fork()) {
+        if (pid = fork()) {
             printf("Parent process ID is %d\n", getpid());
             break;
         }
