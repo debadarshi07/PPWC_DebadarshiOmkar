@@ -1,48 +1,77 @@
 #include <stdio.h>
-#include <pthread.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <semaphore.h>
-
-sem_t sem_X, sem_Y, sem_Z;
-void* process1(void* arg) {
-    for (int i = 0; i < 4; i++) {
-        sem_wait(&sem_X);
-        printf("X");
-        printf("X");
-        sem_post(&sem_Y);
-    }
-    return NULL;
-}
-void* process2(void* arg) {
-    for (int i = 0; i < 4; i++) {
-        sem_wait(&sem_Y);
-        printf("Y");
-        sem_post(&sem_Z);
-    }
-    return NULL;
-}
-void* process3(void* arg) {
-    for (int i = 0; i < 4; i++) {
-        sem_wait(&sem_Z);
-        printf("Z");
-        printf("Z");
-        sem_post(&sem_X);
-    }
-    return NULL;
-}
+#include <fcntl.h> // For O_CREAT and O_EXCL
 
 int main() {
-    pthread_t t1, t2, t3;
-    sem_init(&sem_X, 0, 1);
-    sem_init(&sem_Y, 0, 0);
-    sem_init(&sem_Z, 0, 0);
-    pthread_create(&t1, NULL, process1, NULL);
-    pthread_create(&t2, NULL, process2, NULL);
-    pthread_create(&t3, NULL, process3, NULL);
-    pthread_join(t1, NULL);
-    pthread_join(t2, NULL);
-    pthread_join(t3, NULL);
-    sem_destroy(&sem_X);
-    sem_destroy(&sem_Y);
-    sem_destroy(&sem_Z);
+    // Define named semaphores
+    sem_t *sem_X, *sem_Y1, *sem_Z, *sem_Y2;
+
+    // Initialize named semaphores
+    sem_X = sem_open("/sem_X", O_CREAT | O_EXCL, 0666, 1);   // Start with 'X' allowed
+    sem_Y1 = sem_open("/sem_Y1", O_CREAT | O_EXCL, 0666, 0); // Block 'Y1' initially
+    sem_Z = sem_open("/sem_Z", O_CREAT | O_EXCL, 0666, 0);   // Block 'Z' initially
+    sem_Y2 = sem_open("/sem_Y2", O_CREAT | O_EXCL, 0666, 0); // Block 'Y2' initially
+
+    if (sem_X == SEM_FAILED || sem_Y1 == SEM_FAILED || sem_Z == SEM_FAILED || sem_Y2 == SEM_FAILED) {
+        perror("sem_open failed");
+        exit(EXIT_FAILURE);
+    }
+
+    // Create child processes
+    pid_t pid_X, pid_Y, pid_Z;
+
+    // Process for 'X'
+    if ((pid_X = fork()) == 0) {
+        for (int i = 0; i < 4; i++) { // Repeat 4 times
+            sem_wait(sem_X);          // Wait for 'X'
+            printf("X");
+            printf("X");
+            fflush(stdout);           // Ensure immediate output
+            sem_post(sem_Y1);         // Signal 'Y1'
+        }
+        exit(0);
+    }
+
+    // Process for 'Y' (handles both 'Y1' and 'Y2')
+    if ((pid_Y = fork()) == 0) {
+        for (int i = 0; i < 4; i++) {
+            sem_wait(sem_Y1);         // Wait for 'Y1'
+            printf("Y");
+            fflush(stdout);           // Ensure immediate output
+            sem_post(sem_Z);          // Signal 'Z'
+
+            sem_wait(sem_Y2);         // Wait for 'Y2'
+            printf("Y");
+            fflush(stdout);           // Ensure immediate output
+            sem_post(sem_X);          // Signal 'X'
+        }
+        exit(0);
+    }
+
+    // Process for 'Z'
+    if ((pid_Z = fork()) == 0) {
+        for (int i = 0; i < 4; i++) {
+            sem_wait(sem_Z);          // Wait for 'Z'
+            printf("Z");
+            printf("Z");
+            fflush(stdout);           // Ensure immediate output
+            sem_post(sem_Y2);         // Signal 'Y2'
+        }
+        exit(0);
+    }
+
+    // Wait for child processes to complete
+    wait(NULL);
+    wait(NULL);
+    wait(NULL);
+
+    // Cleanup semaphores
+    sem_unlink("/sem_X");
+    sem_unlink("/sem_Y1");
+    sem_unlink("/sem_Z");
+    sem_unlink("/sem_Y2");
+
     return 0;
 }
