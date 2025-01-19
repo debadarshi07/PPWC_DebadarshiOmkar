@@ -4,12 +4,13 @@
 
 void binaryToHex(char *binary) {
     int length = strlen(binary);
-    int decimalValue = 0;
+    int decimalValue = 0, power = 0;
 
-    for (int i = length; i >= 0; i--) {
+    for (int i = length - 1; i >= 0; i--) {
         if (binary[i] == '1') {
-            decimalValue += pow(2, i);
+            decimalValue += pow(2, power);
         }
+        power++;
     }
     printf("Hexadecimal: %X\n", decimalValue);
 }

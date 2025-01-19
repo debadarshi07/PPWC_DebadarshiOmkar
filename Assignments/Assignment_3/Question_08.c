@@ -14,7 +14,7 @@ char findFirstRepetitive(char word[], int size) {
 
 char findFirstRepetitive2(char word[], int size) {
     int collect[size];
-    int i = 0, j = 0, index = 0;
+    int i, j, index = 0;
     for (i = 0; i < size; i++) {
         for (j = 0; j < index; j++) {
             if (word[i] == collect[j]) {
