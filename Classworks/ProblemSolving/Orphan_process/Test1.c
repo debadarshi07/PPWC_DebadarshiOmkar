@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -10,7 +9,7 @@ int main() {
     printf("Parent Process : Executed by parent process before fork() - PID = (%d)\n", getpid());
     id = fork();
     if (id < 0) {
-        printf("\nfork failed\n");
+        printf("\nFork failed\n");
         exit(-1);
     }
     if (id > 0) {
