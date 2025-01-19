@@ -11,5 +11,7 @@ int main() {
     printf("Enter three numbers> ");
     scanf("%lf%lf%lf", &one, &two, &three);
     sum_n_avg(one, two, three, &sum_of_3, &avg_of_3);
+    printf("Sum: %lf, Average: %lf", sum_of_3, avg_of_3);
+
     return 0;
 }
