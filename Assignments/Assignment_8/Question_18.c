@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-
 struct stud {
 	int r;
 	int m;
