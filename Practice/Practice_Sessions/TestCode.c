@@ -72,8 +72,15 @@ int main () {
 	if (a == 5.5) {
 		printf("\nTrue: %f\n", a);
 	} else {
-		printf("\nFalse: %f\n", a);
+		printf("\nFalse: %f\n\n", a);
 	}
+
+	// Division and Modulus Operators
+	printf("Operation\tQuotient\tRemainder\n");
+	printf("7 / 3\t\t   %d\t\t   %d\n", 7 / 3, 7 % 3);
+	printf("-7 / 3\t\t   %d\t\t   %d\n", -7 / 3, -7 % 3);
+	printf("7 / -3\t\t   %d\t\t   %d\n", 7 / -3, 7 % -3);
+	printf("-7 / -3\t\t   %d\t\t   %d\n", -7 / -3, -7 % -3);
 
 	return 0;
 }
