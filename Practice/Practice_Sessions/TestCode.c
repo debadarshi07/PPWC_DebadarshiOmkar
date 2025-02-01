@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main () {
 	// Testing pointers
@@ -80,7 +81,29 @@ int main () {
 	printf("7 / 3\t\t   %d\t\t   %d\n", 7 / 3, 7 % 3);
 	printf("-7 / 3\t\t   %d\t\t   %d\n", -7 / 3, -7 % 3);
 	printf("7 / -3\t\t   %d\t\t   %d\n", 7 / -3, 7 % -3);
-	printf("-7 / -3\t\t   %d\t\t   %d\n", -7 / -3, -7 % -3);
+	printf("-7 / -3\t\t   %d\t\t   %d\n\n", -7 / -3, -7 % -3);
+
+	int arr[4][3] = {0};
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 3; j++) {
+			printf("%d ", arr[i][j]);
+		}
+	}
+	printf("\n\n");
+
+	char ch = getchar();
+	putchar(ch);
+	printf("\n\n");
+
+	char *str = "#@Hello World";
+	char str1[10];
+	strcpy(str1, str);
+
+	char *str2;
+	str = &str[0] + 2;
+	strcpy(str2, str);
+	printf("str1: %s\n", str1);
+	printf("str2: %s\n\n", str2);
 
 	return 0;
 }
