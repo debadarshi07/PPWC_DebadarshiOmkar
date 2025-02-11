@@ -11,3 +11,8 @@ int main() {
     print(3);
     return 0;
 }
+
+/*
+    O/P
+    1213121
+*/
