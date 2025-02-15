@@ -17,3 +17,8 @@ int main() {
     printf("%d", count(3) + count(4));
     return 0;
 }
+
+/*
+    O/P
+    42
+*/
